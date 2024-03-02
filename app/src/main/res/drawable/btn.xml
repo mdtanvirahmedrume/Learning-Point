@@ -1,0 +1,30 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Shadow -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/_5sdp"
+                />
+            <solid android:color="#2FA5A4A4" /> <!-- Adjust opacity as needed -->
+        </shape>
+    </item>
+    <!-- Button background -->
+    <item android:top="0dp"
+        android:left="@dimen/_1sdp"
+        android:right="@dimen/_1sdp"
+        android:bottom="@dimen/_3sdp">
+        <shape>
+            <corners android:radius="@dimen/_5sdp"
+                />
+            <stroke
+                android:width="@dimen/_1sdp"
+                android:color="#F0F0F0"
+                />
+            <gradient
+                android:gradientRadius="@dimen/_5sdp"
+                android:startColor="#6DFFF7F7"
+                android:endColor="@color/bg_color"
+                android:angle="180"
+                android:useLevel="true" />
+        </shape>
+    </item>
+</layer-list>

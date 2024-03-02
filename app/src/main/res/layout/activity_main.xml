@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/bg_color"
+    >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+    <!--   Slider ***********************     -->
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:layout_marginTop="20dp"
+        android:id="@+id/smartSlider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_120sdp"
+        android:paddingStart="60dp"
+        android:paddingEnd="60dp"
+        />
+
+    <!--   Subject Button *********************** -->
+    <LinearLayout
+        android:id="@+id/lay1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="20"
+        android:orientation="horizontal"
+        android:layout_below="@id/smartSlider"
+        android:layout_margin="@dimen/_10sdp">
+
+        <Button
+            android:id="@+id/biology"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_weight="10"
+            android:text="@string/biology"
+            android:maxLines="1"
+            android:textStyle="normal"
+            android:layout_margin="@dimen/_5sdp"
+            android:fontFamily="@font/ubantu"
+            android:textColor="@color/black"
+            android:background="@drawable/btn"
+
+            style="?android:attr/buttonBarButtonStyle" />
+
+        <Button
+            android:id="@+id/english"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_weight="10"
+            android:text="@string/english"
+            android:textStyle="normal"
+            android:maxLines="1"
+            android:layout_margin="@dimen/_5sdp"
+            android:fontFamily="@font/ubantu"
+            android:textColor="@color/black"
+            android:background="@drawable/btn"
+            style="?android:attr/buttonBarButtonStyle" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lay2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="20"
+        android:orientation="horizontal"
+        android:layout_below="@id/lay1"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        >
+
+        <Button
+            android:id="@+id/math"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_weight="10"
+            android:text="@string/math"
+            android:maxLines="1"
+            android:textStyle="normal"
+            android:layout_margin="@dimen/_5sdp"
+            android:fontFamily="@font/ubantu"
+            android:textColor="@color/black"
+            android:background="@drawable/btn"
+            style="?android:attr/buttonBarButtonStyle" />
+
+        <Button
+            android:id="@+id/gknowladge"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_weight="10"
+            android:text="@string/genaral_knowladge"
+            android:maxLines="1"
+            android:textStyle="normal"
+            android:layout_margin="@dimen/_5sdp"
+            android:fontFamily="@font/ubantu"
+            android:textColor="@color/black"
+            android:background="@drawable/btn"
+            style="?android:attr/buttonBarButtonStyle" />
+    </LinearLayout>
+
+
+    <!--  Subject End  -->
+    <!--   Course Details Start-->
+    <LinearLayout
+        android:id="@+id/lay3"
+        android:layout_below="@id/lay2"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="20"
+
+        android:baselineAligned="false">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="10"
+            android:background="@drawable/btn"
+            android:padding="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+                android:src="@drawable/img1"
+                android:importantForAccessibility="no" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubantu"
+                android:maxLines="2"
+                android:text="@string/complex_variable_and_statics"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                tools:ignore="TextSizeCheck" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/total_topics_05"
+                android:textColor="@color/black"
+                android:fontFamily="@font/ubantu"
+                android:maxLines="2"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="10"
+            android:background="@drawable/btn"
+            android:padding="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+                android:src="@drawable/img2"
+                tools:ignore="ImageContrastCheck"
+                android:importantForAccessibility="no" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubantu"
+                android:maxLines="2"
+                android:text="@string/topical_past_papers_biology"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                tools:ignore="TextSizeCheck" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/total_topics_05"
+                android:textColor="@color/black"
+                android:fontFamily="@font/ubantu"
+                android:maxLines="2"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+<!--   2nd Course  -->
+    <LinearLayout
+        android:id="@+id/lay4"
+        android:layout_below="@id/lay3"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="20"
+
+        android:baselineAligned="false">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="10"
+            android:background="@drawable/btn"
+            android:padding="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+                android:src="@drawable/img3"
+                android:importantForAccessibility="no" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubantu"
+                android:maxLines="2"
+                android:text="@string/complex_variable_and_statics"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                tools:ignore="TextSizeCheck" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/total_topics_05"
+                android:textColor="@color/black"
+                android:fontFamily="@font/ubantu"
+                android:maxLines="2"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="10"
+            android:background="@drawable/btn"
+            android:padding="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+                android:src="@drawable/img1"
+                android:contentDescription="TODO"
+                tools:ignore="ContentDescription,HardcodedText" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubantu"
+                android:maxLines="2"
+                android:text="@string/topical_past_papers_biology"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                tools:ignore="TextSizeCheck" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/total_topics_05"
+                android:textColor="@color/black"
+                android:fontFamily="@font/ubantu"
+                android:maxLines="2"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <!--   Course Details End-->
+    <ImageView
+        android:layout_below="@id/lay4"
+        android:id="@+id/Whatsapp"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:src="@drawable/whatsapp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/btn"
+        />
+        <TextView
+            android:layout_below="@id/Whatsapp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_12sdp"
+            android:text="@string/for_emergency_contact"
+            android:textColor="@color/black"
+            android:fontFamily="@font/ubantu"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_12sdp"
+            />
+
+    </RelativeLayout>
+</ScrollView>

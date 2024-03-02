@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Learning Point</string>
+    <string name="Next">Next</string>
+    <string name="developer_tanvir_ahmed">Developer: Tanvir Ahmed</string>
+    <string name="biology">Biology</string>
+    <string name="english">English</string>
+    <string name="math">Math</string>
+    <string name="genaral_knowladge">Genaral Knowladge</string>
+    <string name="complex_variable_and_statics">Complex Variable and Statics</string>
+    <string name="topical_past_papers_biology">Topical Past Papers Biology</string>
+    <string name="total_topics_05">Total Topics: 05</string>
+    <string name="for_emergency_contact">For Emergency Contact</string>
+</resources>
