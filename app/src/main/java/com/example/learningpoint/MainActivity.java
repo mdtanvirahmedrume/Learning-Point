@@ -45,9 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
         viewPager2.setAdapter(new SliderAdapter(sliderItems,viewPager2,3000));
 
-         new SliderAdapter((position, title, view) -> {
-            Toast.makeText(this, "Position: "+position+" Title: "+title, Toast.LENGTH_SHORT).show();
-        });
+         new SliderAdapter((position, title, view) -> Toast.makeText(this, "Position: "+position+" Title: "+title, Toast.LENGTH_SHORT).show());
 
 
          //Function Calling Method is Here
@@ -61,42 +59,31 @@ public class MainActivity extends AppCompatActivity {
     }//Oncreate Method Close here
 
     private void gknowladgeCall() {
-        gknowladge.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Gknowladge.class);
-                startActivity(intent);
-            }
+        gknowladge.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, Gknowladge.class);
+            startActivity(intent);
         });
     }
 
     private void mathCall() {
-        math.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        math.setOnClickListener(v ->{
                 Intent intent = new Intent(MainActivity.this, Math.class);
                 startActivity(intent);
-            }
         });
     }
 
     private void englishCall() {
-        english.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        english.setOnClickListener(v -> {
                 Intent intent = new Intent(MainActivity.this, English.class);
                 startActivity(intent);
-            }
+
         });
     }
 
     private void biologyCall() {
-        biology.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Biology.class);
-                startActivity(intent);
-            }
+        biology.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, Biology.class);
+            startActivity(intent);
         });
     }
 
