@@ -206,7 +206,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:weightSum="20"
-
         android:baselineAligned="false">
         <LinearLayout
             android:layout_width="match_parent"
@@ -292,7 +291,7 @@
         android:layout_marginTop="@dimen/_15sdp"
         android:layout_centerHorizontal="true"
         android:background="@drawable/btn"
-        />
+        android:contentDescription="@string/todo" />
         <TextView
             android:layout_below="@id/Whatsapp"
             android:layout_width="match_parent"
