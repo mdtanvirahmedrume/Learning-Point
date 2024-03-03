@@ -1,17 +1,16 @@
 package com.example.learningpoint;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.viewpager2.widget.ViewPager2;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager2.widget.ViewPager2;
 
 import com.bdtopcoder.smart_slider.SliderAdapter;
 import com.bdtopcoder.smart_slider.SliderItem;
@@ -88,30 +87,28 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //Whatsapp Function
+    @SuppressLint("QueryPermissionsNeeded")
     private void WhatsappCall() {
-        Whatsapp.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("QueryPermissionsNeeded")
-            @Override
-            public void onClick(View v) {
-                String phoneNumber = "+8801728491646"; // Corrected phone number format
-                String whatsappUrl = "https://wa.me/" + phoneNumber;
+        Whatsapp.setOnClickListener(v -> {
+            // Your WhatsApp handling logic here
+            String phoneNumber = "+8801728491646"; // Corrected phone number format
+            String whatsappUrl = "https://wa.me/" + phoneNumber;
 
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse(whatsappUrl));
-                intent.setPackage("com.whatsapp");
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setData(Uri.parse(whatsappUrl));
+            intent.setPackage("com.whatsapp");
 
-                PackageManager pm = getPackageManager();
-                if (intent.resolveActivity(pm) != null) {
-                    try {
-                        startActivity(intent);
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                        Toast.makeText(getApplicationContext(), "Error opening WhatsApp.", Toast.LENGTH_SHORT).show();
-                    }
-                } else {
-                    String message = "WhatsApp is not installed on your device.";
-                    Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
+            PackageManager pm = getPackageManager();
+            if (intent.resolveActivity(pm) != null) {
+                try {
+                    startActivity(intent);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    Toast.makeText(getApplicationContext(), "Error opening WhatsApp.", Toast.LENGTH_SHORT).show();
                 }
+            } else {
+                String message = "WhatsApp is not installed on your device.";
+                Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
             }
         });
     }
