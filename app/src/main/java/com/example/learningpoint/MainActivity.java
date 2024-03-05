@@ -5,8 +5,12 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.CountDownTimer;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
+import android.widget.ScrollView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,6 +26,10 @@ public class MainActivity extends AppCompatActivity {
 
     Button biology,english,math,gknowladge;
     ImageView Whatsapp;
+    ProgressBar progress_bar;
+    ScrollView ScrollView;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         math = findViewById(R.id.math);
         gknowladge = findViewById(R.id.gknowladge);
         Whatsapp = findViewById(R.id.Whatsapp);
+        progress_bar = findViewById(R.id.progress_bar);
 
 
 
@@ -53,9 +62,11 @@ public class MainActivity extends AppCompatActivity {
         mathCall();
         gknowladgeCall();
         WhatsappCall();
+        progress_barCall();
 
 
     }//Oncreate Method Close here
+
 
     private void gknowladgeCall() {
         gknowladge.setOnClickListener(v -> {
@@ -112,5 +123,38 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    //ProgressBar function call
+    private void progress_barCall() {
+        if (progress_bar.getVisibility() == View.INVISIBLE) {
+            progress_bar.setVisibility(View.VISIBLE);
+        }
+
+        final int[] currentProgress = {0}; // Declare as final array to be accessible inside CountDownTimer
+
+        CountDownTimer countDownTimer = new CountDownTimer(11 * 1000, 1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                currentProgress[0] += 10; // Increment the progress
+                progress_bar.setProgress(currentProgress[0]);
+                progress_bar.setMax(100);
+            }
+
+            @Override
+            public void onFinish() {
+                // Progress completed
+                progress_bar.setVisibility(View.INVISIBLE);
+            }
+        };
+
+        countDownTimer.start();
+    }
+
+
+
+
+
+
+
 
 }
